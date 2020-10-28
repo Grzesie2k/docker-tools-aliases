@@ -1,0 +1,3 @@
+#!/bin/sh
+
+docker run --rm -i --user $(id -u):$(id -g) -v $HOME/.local/share:$HOME/.local/share -w $(pwd) -v $(pwd):$(pwd) node node "$@"

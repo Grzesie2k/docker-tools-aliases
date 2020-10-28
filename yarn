@@ -1,0 +1,4 @@
+#!/bin/sh
+
+docker run --rm -i --user $(id -u):$(id -g) -w $(pwd) -v $(pwd):$(pwd) -v $HOME/.yarn/cache:/home/node/.cache/yarn node yarn "$@"
+

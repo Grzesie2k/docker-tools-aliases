@@ -1,0 +1,4 @@
+#!/bin/sh
+
+docker run --rm -it --user $(id -u):$(id -g) -w /app -v $(pwd):/app -e COMPOSER_HOME="" -e COMPOSER_CACE_DIR="" -v $HOME/.composer:/.composer composer "$@"
+
